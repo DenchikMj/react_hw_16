@@ -53,9 +53,9 @@ class SearchContacts extends Component {
 
     // Проверка на вхождение строки введенную в поиске
     FilterOnText(aContact) {
-        if (aContact.firstName.toLowerCase().includes(this.state.searchStr) ||
-            aContact.lastName.toLowerCase().includes(this.state.searchStr) ||
-            aContact.phone.toLowerCase().includes(this.state.searchStr)) {
+        if (aContact.firstName.toLowerCase().includes(this.state.searchStr.toLowerCase()) ||
+            aContact.lastName.toLowerCase().includes(this.state.searchStr.toLowerCase()) ||
+            aContact.phone.toLowerCase().includes(this.state.searchStr.toLowerCase())) {
             return true;
         }
         return false;
